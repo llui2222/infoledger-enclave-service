@@ -1,0 +1,19 @@
+Configuration:
+  status: debug
+  Appenders:
+    Console:
+      name: Console
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+  Loggers:
+    logger:
+      - name: com.infoledger.aggregation
+        level: debug
+        additivity: false
+        AppenderRef:
+          ref: Console
+    Root:
+      level: info
+      AppenderRef:
+        ref: Console

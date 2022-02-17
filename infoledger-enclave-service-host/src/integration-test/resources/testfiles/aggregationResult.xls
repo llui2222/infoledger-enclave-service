@@ -1,0 +1,1020 @@
+
+
+
+
+
+
+<html>
+<head>
+    <title>Time Tracking Report</title>
+    <meta name="decorator" content="none" />
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8" />
+</head>
+<body>
+
+<table id="time_tracking_report_table" border="1">
+<tr>
+    <td bgcolor="#205081" colspan="15" height=30>
+        <img src="/images/icon-jira-software-logo.png" width="57" height="30" border="0" alt="Jira">
+    </td>
+</tr>
+<tr>
+    <td bgcolor=#ffffff colspan="15">
+        <a href=""><span class="bluetext">Jira</span></a>
+    </td>
+</tr>
+<tr>
+    <th bgcolor="#dddddd">Issue Type</th>
+    <th bgcolor="#dddddd"><b>Key</b></th>
+    <th bgcolor="#dddddd"><b>Status</b></th>
+    <th bgcolor="#dddddd"><b>Priority</b></th>
+    <th bgcolor="#dddddd"><b>Summary</b></th>
+    <th bgcolor="#dddddd"><b>Original Time Estimated (min)</b></th>
+            <th bgcolor="#dddddd">&Sigma;</th>
+        <th bgcolor="#dddddd"><b>Estimated Time Remaining (min)</b></th>
+            <th bgcolor="#dddddd">&Sigma;</th>
+        <th bgcolor="#dddddd"><b>Total Time Spent (min)</b></th>
+            <th bgcolor="#dddddd">&Sigma;</th>
+        <th bgcolor="#dddddd"><b>Accuracy</b></th>
+            <th bgcolor="#dddddd">&Sigma;</th>
+        <th bgcolor="#dddddd"><b>Accuracy (%)</b></th>
+            <th bgcolor="#dddddd">&Sigma;</th>
+    </tr>
+
+    <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-13">IL-13</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                User sign in and sign out
+    </td>
+    <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-18">IL-18</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Data encryption in transit - SSL
+    </td>
+    <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-22">IL-22</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Files upload
+    </td>
+    <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-24">IL-24</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Uploaded/stored files validation
+    </td>
+    <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-25">IL-25</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Storing decrypted data in Data Lake/Data Warehouse
+    </td>
+    <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-28">IL-28</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Browsing products area
+    </td>
+    <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td>480</td>
+            <td>
+                            480
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-12">IL-12</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                New user sign up
+    </td>
+    <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-16">IL-16</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Sending invitations to other users
+    </td>
+    <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-20">IL-20</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Ability to attach files while sending messages 
+    </td>
+    <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-21">IL-21</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Contact list
+    </td>
+    <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-23">IL-23</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Files browsing, downloading and deleting
+    </td>
+    <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-27">IL-27</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Messages - sorting and filtering
+    </td>
+    <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-29">IL-29</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Managing products
+    </td>
+    <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td>960</td>
+            <td>
+                            960
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-14">IL-14</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                User profile view and update
+    </td>
+    <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-15">IL-15</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Group/Company profile view and update
+    </td>
+    <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-17">IL-17</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Sending messages to other IL users
+    </td>
+    <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-26">IL-26</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Sending and receiving payments
+    </td>
+    <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-30">IL-30</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Subscriptions management
+    </td>
+    <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td>1440</td>
+            <td>
+                            1440
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-19">IL-19</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Encryption while sending and receiving data - files and messages
+    </td>
+    <td>1920</td>
+            <td>
+                            1920
+                    </td>
+        <td>1920</td>
+            <td>
+                            1920
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+                    
+            </td>
+            <td>
+                            
+                    </td>
+        <td>
+                    0
+            </td>
+            <td>
+                            0
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Epic</td>
+    <td><a href="/browse/IL-1">IL-1</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                InfoLedger Minimum Viable Product
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-2">IL-2</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Run existing UI on AWS
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-3">IL-3</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Integrate UI Sign Up module with AWS Cognito
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Task</td>
+    <td><a href="/browse/IL-4">IL-4</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Component for Visual Data Validation
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-5">IL-5</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Evaluate Signal server and protocol 
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-6">IL-6</a></td>
+    <td>Done</td>
+    <td>Medium</td>
+    <td>
+                Evaluate confidential compute on AWS
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Story</td>
+    <td><a href="/browse/IL-7">IL-7</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Evaluate private key/certificate management on AWS
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Epic</td>
+    <td><a href="/browse/IL-8">IL-8</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Create InfoLedger customer portal with modern user experience using Angular 
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Epic</td>
+    <td><a href="/browse/IL-9">IL-9</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                InfoLedger API design and development 
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Epic</td>
+    <td><a href="/browse/IL-10">IL-10</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                InfoLedger AWS services provisioning, configuration and security
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>        <tr valign="top">
+    <td>
+                Epic</td>
+    <td><a href="/browse/IL-11">IL-11</a></td>
+    <td>To Do</td>
+    <td>Medium</td>
+    <td>
+                Front end and back end security scans
+    </td>
+    <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td></td>
+            <td>
+                            
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+        <td>
+            </td>
+            <td>
+                    </td>
+    </tr>    
+<tr>
+    <td colspan="4" align="right">
+        &nbsp;
+    </td>
+    <td><b>Total</b></td>
+    <td>18720</td>
+            <td>18720</td>
+        <td>18720</td>
+            <td>18720</td>
+        <td>0</td>
+            <td>0</td>
+        <td>0</td>
+            <td>0</td>
+        <td>0</td>
+            <td>0</td>
+    </tr>
+
+<tr>
+    <td bgcolor="#ffffff" colspan="15">&nbsp;</td>
+</tr>
+<tr>
+    <td bgcolor="#dddddd" colspan="15"><font size=1>
+                    Generated at 12/23/20 11:49 PM by Khadanovich Mikhail using Jira 1001.0.0-SNAPSHOT#100153-sha1:16aad59834acdd9d8e33083c7d621f730f418a45.
+            </font></td>
+</tr>
+</table>
+
+
+</body>
+</html>

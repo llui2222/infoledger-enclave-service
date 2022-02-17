@@ -1,0 +1,104 @@
+logging:
+  level:
+    com:
+      infoledger:
+        aggregation:
+          DEBUG
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+server:
+  port: 8080
+
+infoledger:
+  api:
+    version: v1
+
+cognito:
+  jwk:
+    userPoolId: "us-east-1_Gnn0tuS0V"
+    identityPoolId: "us-east-1:be536160-a21f-4b38-9217-8055fc80317b"
+    region: "us-east-1"
+    userNameField: "sub"
+    cognitoClientId: "1pt0tjf860ftermo4t7u7j2rp2"
+    connectionTimeout: 2000
+    readTimeout: 2000
+    httpHeader: "authorization"
+    jwkUrl: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_Gnn0tuS0V/.well-known/jwks.json
+    identityPoolUrl: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_Gnn0tuS0V
+
+amazon:
+  aws:
+    bucket:
+      attachments: infoledger-attachments-bucket
+      aggregations: infoledger-aggregations-bucket
+    s3:
+      endpoint: http://localhost:8002/
+      port: 8002
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+
+server:
+  port: 8080
+
+infoledger:
+  api:
+    version: v1
+
+cognito:
+  jwk:
+    userPoolId: "us-east-1_Gnn0tuS0V"
+    identityPoolId: "us-east-1:be536160-a21f-4b38-9217-8055fc80317b"
+    region: "us-east-1"
+    userNameField: "sub"
+    cognitoClientId: "1pt0tjf860ftermo4t7u7j2rp2"
+    connectionTimeout: 2000
+    readTimeout: 2000
+    httpHeader: "authorization"
+    jwkUrl: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_Gnn0tuS0V/.well-known/jwks.json
+    identityPoolUrl: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_Gnn0tuS0V
+
+amazon:
+  aws:
+    bucket:
+      attachments: infoledger-attachments-bucket
+      aggregations: infoledger-aggregations-bucket
+    s3:
+      endpoint: http://localhost:8002/
+      port: 8002
+
+---
+spring:
+  config:
+    activate:
+      on-profile: cloud
+
+server:
+  port: 8080
+
+infoledger:
+  api:
+    version: v1
+
+cognito:
+  jwk:
+    userPoolId: "us-east-1_Gnn0tuS0V"
+    identityPoolId: "us-east-1:be536160-a21f-4b38-9217-8055fc80317b"
+    awsAccountId: "840966547573"
+    region: "us-east-1"
+    userNameField: "sub"
+    cognitoClientId: "1pt0tjf860ftermo4t7u7j2rp2"
+    connectionTimeout: 2000
+    readTimeout: 2000
+    httpHeader: "authorization"
+    identityProviderKey: "cognito-idp.us-east-1.amazonaws.com/us-east-1_Gnn0tuS0V"
+    jwkUrl: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_Gnn0tuS0V/.well-known/jwks.json
+    identityPoolUrl: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_Gnn0tuS0V

@@ -1,0 +1,180 @@
+image: maven:3.6.3-jdk-11
+
+clone:
+  depth: full              # SonarCloud scanner needs the full history to assign issues properly
+
+definitions:
+  caches:
+    sonar: ~/.sonar/cache  # Caching SonarCloud artifacts will speed up your build
+  steps:
+    - step: &build-all
+        name: Build all project modules
+        caches:
+          - maven
+        script:
+          - echo "Building all project modules!"
+          - mvn --settings settings.xml clean install -U -DskipTests 
+      parallel:
+        - step: &build-test-sonarcloud-api
+            name: Build, test and analyze on SonarCloud Service API
+            caches:
+              - maven
+              - sonar
+            script:
+              - echo "Build, test and analyze on SonarCloud Service API"
+              - mvn -pl crypto-service-enclave-api --settings settings.xml clean install -U -DskipTests 
+              - mvn -pl .,crypto-service-enclave-api -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar  
+              - pipe: sonarsource/sonarcloud-scan:1.2.1
+                variables:
+                  SONAR_TOKEN: $SONAR_TOKEN
+                  EXTRA_ARGS: -Dsonar.java.binaries=\"crypto-service-enclave-api/target/classes\" -Dsonar.coverage.exclusions=\"**/configuration/*\",\"**/configuration/**/*\",\"**/*Test.java\",\"**/Test*.java\",\"**/Stub*.java\"
+                  #   SONAR_SCANNER_OPTS: '<string>'  # Optional
+                  #   DEBUG: '<boolean>'  # Optional
+            artifacts:
+              - target/**
+        - step: &build-test-sonarcloud-aggregation-service
+            name: Build, test and analyze on SonarCloud Aggregation Service
+            caches:
+              - maven
+              - sonar
+            script:
+              - echo "Build, test and analyze on SonarCloud Aggregation Service"
+              - mvn -pl crypto-aggregation-service --settings settings.xml clean install -U -DskipTests 
+              - mvn -pl .,crypto-aggregation-service -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+              - pipe: sonarsource/sonarcloud-scan:1.2.1
+                variables:
+                  SONAR_TOKEN: $SONAR_TOKEN
+                  EXTRA_ARGS: -Dsonar.java.binaries=\".\" -Dsonar.coverage.exclusions=\"**/configuration/*\",\"**/configuration/**/*\",\"**/*Test.java\",\"**/Test*.java\",\"**/Stub*.java\"
+                  #   SONAR_SCANNER_OPTS: '<string>'  # Optional
+                  #   DEBUG: '<boolean>'  # Optional
+            artifacts:
+              - target/**
+        - step: &build-test-sonarcloud-validation-service
+            name: Build, test and analyze on SonarCloud Validation Service
+            caches:
+              - maven
+              - sonar
+            script:
+              - echo "Build, test and analyze on SonarCloud Validation Service"
+              - mvn -pl crypto-validation-service --settings settings.xml clean install -U -DskipTests 
+              - mvn -pl .,crypto-validation-service -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar  
+              - pipe: sonarsource/sonarcloud-scan:1.2.1
+                variables:
+                  SONAR_TOKEN: $SONAR_TOKEN
+                  EXTRA_ARGS: -Dsonar.java.binaries=\".\" -Dsonar.coverage.exclusions=\"**/configuration/*\",\"**/configuration/**/*\",\"**/*Test.java\",\"**/Test*.java\",\"**/Stub*.java\"
+                  #   SONAR_SCANNER_OPTS: '<string>'  # Optional
+                  #   DEBUG: '<boolean>'  # Optional
+            artifacts:
+              - target/**
+        - step: &build-test-sonarcloud-client
+            name: Build, test and analyze on SonarCloud Service Client
+            caches:
+              - maven
+              - sonar
+            script:
+              - echo "Build, test and analyze on SonarCloud Service Client"
+              - mvn -pl crypto-service-enclave-client --settings settings.xml clean install -U -DskipTests 
+              - mvn -pl .,crypto-service-enclave-client -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar  
+              - pipe: sonarsource/sonarcloud-scan:1.2.1
+                variables:
+                  SONAR_TOKEN: $SONAR_TOKEN
+                  EXTRA_ARGS: -Dsonar.java.binaries=\".\" -Dsonar.coverage.exclusions=\"**/configuration/*\",\"**/configuration/**/*\",\"**/*Test.java\",\"**/Test*.java\",\"**/Stub*.java\"
+                  #   SONAR_SCANNER_OPTS: '<string>'  # Optional
+                  #   DEBUG: '<boolean>'  # Optional
+            artifacts:
+              - target/**
+        - step: &build-test-sonarcloud-app
+            name: Build, test and analyze on SonarCloud Service App
+            caches:
+              - maven
+              - sonar
+            script:
+              - echo "Build, test and analyze on SonarCloud Service App"
+              - mvn -pl crypto-service-enclave-app --settings settings.xml clean install -U -DskipTests 
+              - mvn -pl .,crypto-service-enclave-app -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar  
+              - pipe: sonarsource/sonarcloud-scan:1.2.1
+                variables:
+                  SONAR_TOKEN: $SONAR_TOKEN
+                  EXTRA_ARGS: -Dsonar.java.binaries=\".\" -Dsonar.coverage.exclusions=\"**/configuration/*\",\"**/configuration/**/*\",\"**/*Test.java\",\"**/Test*.java\",\"**/Stub*.java\"
+                  #   SONAR_SCANNER_OPTS: '<string>'  # Optional
+                  #   DEBUG: '<boolean>'  # Optional
+            artifacts:
+              - target/**
+        - step: &build-test-sonarcloud-host
+            name: Build, test and analyze on SonarCloud Host App
+            caches:
+              - maven
+              - sonar
+            script:
+              - echo "Build, test and analyze on SonarCloud Host App"
+              - mvn -pl infoledger-enclave-service-host --settings settings.xml clean install -U -DskipTests 
+              - mvn -pl .,infoledger-enclave-service-host -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar  
+              - pipe: sonarsource/sonarcloud-scan:1.2.1
+                variables:
+                  SONAR_TOKEN: $SONAR_TOKEN
+                  EXTRA_ARGS: -Dsonar.java.binaries=\"infoledger-enclave-service-host/target/classes\" -Dsonar.coverage.exclusions=\"**/configuration/*\",\"**/configuration/**/*\",\"**/*Test.java\",\"**/Test*.java\",\"**/Stub*.java\"
+                  #   SONAR_SCANNER_OPTS: '<string>'  # Optional
+                  #   DEBUG: '<boolean>'  # Optional
+            artifacts:
+              - target/**
+        - step: &deploy-snapshot-artefacts-to-S3
+            name: Deploy artefacts to S3
+            caches:
+              - maven
+              - sonar
+            script:
+              - echo "Deploy artefacts to S3"
+              # Need clarification, for now just additional build all
+              - mvn --settings settings.xml clean install -DskipTests 
+            artifacts:
+              - target/**
+        - step: &deploy-release-artefacts-to-S3
+            name: Deploy artefacts to S3
+            caches:
+              - maven
+              - sonar
+            script:
+              - echo "Deploy artefacts to S3"
+              # Need clarification, for now just additional build all
+              - mvn --settings settings.xml clean install -DskipTests -U 
+            artifacts:
+              - target/**
+
+    - step: &deploy-to-dev
+        name: "Deploy to Dev"
+        deployment: test
+        script:
+          - echo "Deployment to Dev!"
+          # Need clarification, for now just additional build all
+          - mvn --settings settings.xml clean install -DskipTests -U 
+pipelines: # More info here: https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html
+  branches:
+    master:
+      - step: *build-all
+      - step: *build-test-sonarcloud-api
+      - step: *build-test-sonarcloud-aggregation-service
+      - step: *build-test-sonarcloud-validation-service
+      - step: *build-test-sonarcloud-client
+      - step: *build-test-sonarcloud-app
+      - step: *build-test-sonarcloud-host
+#      - step: *deploy-release-artefacts-to-S3
+#      - step: *deploy-to-dev
+    develop:
+      - step: *build-all
+      - step: *build-test-sonarcloud-api
+      - step: *build-test-sonarcloud-aggregation-service
+      - step: *build-test-sonarcloud-validation-service
+      - step: *build-test-sonarcloud-client
+      - step: *build-test-sonarcloud-app
+      - step: *build-test-sonarcloud-host
+#      - step: *deploy-snapshot-artefacts-to-S3
+#      - step: *deploy-to-dev
+  pull-requests:
+    '**':
+      - step: *build-all
+      - step: *build-test-sonarcloud-api
+      - step: *build-test-sonarcloud-aggregation-service
+      - step: *build-test-sonarcloud-validation-service
+      - step: *build-test-sonarcloud-client
+      - step: *build-test-sonarcloud-app
+      - step: *build-test-sonarcloud-host

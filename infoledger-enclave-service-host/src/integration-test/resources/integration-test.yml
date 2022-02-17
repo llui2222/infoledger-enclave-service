@@ -1,0 +1,7 @@
+restassured:
+  base:
+    uri: http://localhost
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
